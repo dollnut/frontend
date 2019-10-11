@@ -6,11 +6,32 @@
 
 module.exports = {
   siteMetadata: {
-    youtube: { link: "", title: "YouTube", fa: "" },
-    discord: { link: "", title: "Discord", fa: "" },
-    instagram: { link: "", title: "Instagram", fa: "" },
-    twitter: { link: "", title: "Twitter", fa: "" },
-    twitch: { link: "", title: "Twitch", fa: "" },
+    youtube: {
+      link: "",
+      title: "YouTube",
+      fa: "fab fa-youtube",
+    },
+    discord: {
+      link: "",
+      title: "Discord",
+      fa: "fab fa-discord",
+    },
+    instagram: {
+      link: "",
+      title: "Instagram",
+      fa: "fab fa-instagram",
+    },
+    twitter: {
+      link: "",
+      title: "Twitter",
+      fa: "fab fa-twitter",
+    },
+    twitch: {
+      link: "",
+      title: "Twitch",
+      fa: "fab fa-twitch",
+      divider: true,
+    },
   },
   plugins: [`gatsby-plugin-material-ui`, "gatsby-plugin-react-helmet"],
 }

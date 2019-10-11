@@ -1,12 +1,15 @@
-import React from "react"
+import React, { useState } from "react"
 import { AppBar, Toolbar, List, Button, IconButton } from "@material-ui/core"
 import { makeStyles } from "@material-ui/styles"
 import { graphql, useStaticQuery } from "gatsby"
 import FavoriteIcon from "@material-ui/icons/Favorite"
 import TvIcon from "@material-ui/icons/Tv"
 import MenuIcon from "@material-ui/icons/Menu"
+import SideBar from "./SideBar"
 
 const NavBar = () => {
+  const [openSidebar, setOpenSidebar] = useState(false)
+
   const { discord, youtube, instagram, twitter, twitch } = useStaticQuery(
     query
   ).site.siteMetadata
@@ -14,9 +17,15 @@ const NavBar = () => {
   const socials = [discord, youtube, instagram, twitter, twitch]
   return (
     <AppBar className={classes.root}>
+      <SideBar open={openSidebar} onClose={() => setOpenSidebar(false)} />
       <Toolbar>
         <div className={classes.socials}>
-          <IconButton color="inherit">
+          <IconButton
+            color="inherit"
+            onClick={() => {
+              setOpenSidebar(true)
+            }}
+          >
             <MenuIcon />
           </IconButton>
           {socials.map(({ title, link }) => (
