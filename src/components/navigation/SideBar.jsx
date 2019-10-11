@@ -8,7 +8,6 @@ import {
   Divider,
   ListItemIcon,
 } from "@material-ui/core"
-import { graphql, useStaticQuery } from "gatsby"
 import { makeStyles } from "@material-ui/styles"
 import { socialLinks } from "../../data"
 
@@ -47,9 +46,4 @@ export default SideBar
 const UseStyles = makeStyles(theme => ({
   highlight: { color: theme.palette.secondary.main },
   list: { width: 250 },
-  youtube: { color: theme.socials.youtube },
-  discord: { color: theme.socials.discord },
-  instagram: { color: theme.socials.instagram },
-  twitter: { color: theme.socials.twitter },
-  twitch: { color: theme.socials.twitch },
 }))

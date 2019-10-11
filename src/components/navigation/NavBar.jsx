@@ -1,7 +1,6 @@
 import React, { useState } from "react"
-import { AppBar, Toolbar, List, Button, IconButton } from "@material-ui/core"
+import { AppBar, Toolbar, Button, IconButton } from "@material-ui/core"
 import { makeStyles } from "@material-ui/styles"
-import { graphql, useStaticQuery } from "gatsby"
 import FavoriteIcon from "@material-ui/icons/Favorite"
 import TvIcon from "@material-ui/icons/Tv"
 import MenuIcon from "@material-ui/icons/Menu"

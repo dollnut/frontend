@@ -1,9 +1,10 @@
 import React from "react"
-import { AppBar } from "@material-ui/core"
-import { Toolbar } from "@material-ui/core"
-import { Typography } from "@material-ui/core"
 import Layout from "../Layout"
-import { graphql } from "gatsby"
+import HomeContainer from "../components/home/HomeContainer"
 export default () => {
-  return <Layout></Layout>
+  return (
+    <Layout>
+      <HomeContainer />
+    </Layout>
+  )
 }
