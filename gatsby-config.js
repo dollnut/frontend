@@ -5,5 +5,12 @@
  */
 
 module.exports = {
-  /* Your site config here */
+  siteMetadata: {
+    youtube: { link: "", title: "YouTube", fa: "" },
+    discord: { link: "", title: "Discord", fa: "" },
+    instagram: { link: "", title: "Instagram", fa: "" },
+    twitter: { link: "", title: "Twitter", fa: "" },
+    twitch: { link: "", title: "Twitch", fa: "" },
+  },
+  plugins: [`gatsby-plugin-material-ui`, "gatsby-plugin-react-helmet"],
 }
