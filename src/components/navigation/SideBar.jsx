@@ -10,7 +10,7 @@ import {
 } from "@material-ui/core"
 import { graphql, useStaticQuery } from "gatsby"
 import { makeStyles } from "@material-ui/styles"
-import { socialLinks } from "../data"
+import { socialLinks } from "../../data"
 
 const SideBar = ({ open, onClose }) => {
   const classes = UseStyles()

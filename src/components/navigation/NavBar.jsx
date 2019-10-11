@@ -6,7 +6,7 @@ import FavoriteIcon from "@material-ui/icons/Favorite"
 import TvIcon from "@material-ui/icons/Tv"
 import MenuIcon from "@material-ui/icons/Menu"
 import SideBar from "./SideBar"
-import { socialLinks } from "../data"
+import { socialLinks } from "../../data"
 
 const NavBar = () => {
   const [openSidebar, setOpenSidebar] = useState(false)
