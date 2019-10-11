@@ -10,13 +10,10 @@ import {
 } from "@material-ui/core"
 import { graphql, useStaticQuery } from "gatsby"
 import { makeStyles } from "@material-ui/styles"
+import { socialLinks } from "../data"
 
 const SideBar = ({ open, onClose }) => {
   const classes = UseStyles()
-  const { youtube, discord, twitch, instagram, twitter } = useStaticQuery(
-    query
-  ).site.siteMetadata
-  const socials = [discord, youtube, instagram, twitter, twitch]
   return (
     <Drawer open={open} onClose={onClose} anchor="left">
       <Typography
@@ -29,11 +26,11 @@ const SideBar = ({ open, onClose }) => {
         <span className={classes.highlight}>Nut</span>
       </Typography>
       <List className={classes.list}>
-        {socials.map(({ title, link, fa, divider }) => (
+        {socialLinks.map(({ title, link, fa, divider, color }) => (
           <>
             <ListItem button>
               <ListItemIcon>
-                <i className={`${classes[title.toLowerCase()]} ${fa} fa-2x`} />
+                <i className={`${fa} fa-2x`} style={{ color }} />
               </ListItemIcon>
               <ListItemText primary={title} />
             </ListItem>
@@ -56,38 +53,3 @@ const UseStyles = makeStyles(theme => ({
   twitter: { color: theme.socials.twitter },
   twitch: { color: theme.socials.twitch },
 }))
-
-const query = graphql`
-  query {
-    site {
-      siteMetadata {
-        youtube {
-          title
-          link
-          fa
-        }
-        discord {
-          title
-          link
-          fa
-        }
-        twitch {
-          title
-          link
-          fa
-          divider
-        }
-        instagram {
-          title
-          link
-          fa
-        }
-        twitter {
-          title
-          link
-          fa
-        }
-      }
-    }
-  }
-`
