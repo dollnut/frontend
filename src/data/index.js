@@ -4,7 +4,7 @@ export const socialLinks = [
   {
     fa: "fas fa-home",
     title: "DollNut",
-    color: blue[600],
+    color: indigo["A400"],
     divider: true,
     hideOnNav: true,
     internalLink: "/",
