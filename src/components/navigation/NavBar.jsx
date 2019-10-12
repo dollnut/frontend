@@ -1,5 +1,5 @@
 import React, { useState } from "react"
-import { AppBar, Toolbar, Button, IconButton } from "@material-ui/core"
+import { AppBar, Toolbar, Button, IconButton, Hidden } from "@material-ui/core"
 import { makeStyles } from "@material-ui/styles"
 import FavoriteIcon from "@material-ui/icons/Favorite"
 import TvIcon from "@material-ui/icons/Tv"
@@ -23,23 +23,27 @@ const NavBar = () => {
           >
             <MenuIcon />
           </IconButton>
-          {socialLinks.map(
-            ({ title, link, hideOnNav }) =>
-              !hideOnNav && (
-                <Button
-                  component="a"
-                  href={link}
-                  target="_blank"
-                  color="inherit"
-                  className={classes.button}
-                >
-                  {title}
-                </Button>
-              )
-          )}
+          <Hidden smDown>
+            {socialLinks.map(
+              ({ title, link, hideOnNav }) =>
+                !hideOnNav && (
+                  <Button
+                    component="a"
+                    href={link}
+                    target="_blank"
+                    color="inherit"
+                    className={classes.button}
+                  >
+                    {title}
+                  </Button>
+                )
+            )}
+          </Hidden>
+
           <Button variant="contained" color="secondary">
             <FavoriteIcon className={classes.favoriteIcon} />
-            Support the Stream
+            <Hidden smUp>Donate</Hidden>
+            <Hidden xsDown>Support the Stream</Hidden>
           </Button>
         </div>
         <Button color="inherit">
