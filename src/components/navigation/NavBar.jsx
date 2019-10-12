@@ -62,6 +62,7 @@ const useStyles = makeStyles(theme => ({
   root: {
     background: theme.palette.primary.dark,
     color: theme.palette.primary.contrastText,
+    borderBottom: `5px solid ${theme.palette.secondary.light}`,
   },
   button: {},
   favoriteIcon: { margin: theme.spacing(0, 1, 0, 0) },
