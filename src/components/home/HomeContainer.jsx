@@ -10,10 +10,12 @@ import {
   List,
   ListItemText,
   ListItem,
+  Hidden,
 } from "@material-ui/core"
 import banner from "../../img/banner.png"
 import CTA from "./CTA"
 import Feed from "./Feed"
+import Schedule from "./Schedule"
 
 const HomeContainer = () => {
   const classes = useStyles()
@@ -27,10 +29,15 @@ const HomeContainer = () => {
           <CTA />
         </Grid>
       </Grid>
-      <Grid container style={{ margin: "15px 0" }}>
+      <Grid container justify="space-around" style={{ margin: "15px 0" }}>
         <Grid item xs={12} md={6}>
           <Feed />
         </Grid>
+        <Hidden xsDown>
+          <Grid item xs={12} md={4}>
+            <Schedule />
+          </Grid>
+        </Hidden>
       </Grid>
     </Container>
   )
