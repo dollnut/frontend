@@ -1,5 +1,6 @@
 import React from "react"
 import { Helmet } from "react-helmet"
+import logo from "./img/logo.png"
 
 const SEO = ({ title }) => {
   return (
@@ -14,6 +15,7 @@ const SEO = ({ title }) => {
         rel="stylesheet"
         href="https://fonts.googleapis.com/icon?family=Material+Icons"
       />
+      <link rel="shortcut icon" type="image/png" href={logo} />
     </Helmet>
   )
 }

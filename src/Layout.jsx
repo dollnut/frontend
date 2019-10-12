@@ -19,6 +19,6 @@ const Layout = ({ children, classes }) => {
 
 export default withStyles({
   root: {
-    background: theme.palette.primary.main,
+    // background: theme.palette.primary.main,
   },
 })(Layout)
