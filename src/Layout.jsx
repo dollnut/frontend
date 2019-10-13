@@ -13,6 +13,14 @@ const Layout = ({ children, classes }) => {
       <SEO title="DollNutTV" />
       <NavBar />
       <div className={classes.root}>{children}</div>
+      <footer className={classes.footer}>
+        <div>
+          @dollnutTV 2019 |{" "}
+          <a href="https://twitch.tv/dollnut" target="__blank">
+            twitch.tv/dollnut
+          </a>
+        </div>
+      </footer>
     </ThemeProvider>
   )
 }
@@ -20,5 +28,13 @@ const Layout = ({ children, classes }) => {
 export default withStyles({
   root: {
     // background: theme.palette.primary.main,
+  },
+  footer: {
+    margin: "100px 0 50px",
+    color: theme.palette.primary.light,
+    display: "flex",
+    alignItems: "center",
+    justifyContent: "center",
+    flexDirection: "column",
   },
 })(Layout)
