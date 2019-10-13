@@ -34,7 +34,7 @@ const HomeContainer = () => {
           <Feed />
         </Grid>
         <Hidden xsDown>
-          <Grid item xs={12} md={4}>
+          <Grid item xs={12} md={5}>
             <Schedule />
           </Grid>
         </Hidden>
