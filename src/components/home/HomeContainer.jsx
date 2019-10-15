@@ -23,7 +23,9 @@ const HomeContainer = () => {
     <Container style={{ marginTop: 100 }}>
       <Grid container justify="space-around" alignItems="center">
         <Grid item xs={12} md={6}>
-          <img src={banner} alt="" srcset="" className={classes.banner} />
+          <Hidden xsDown>
+            <img src={banner} alt="" srcset="" className={classes.banner} />
+          </Hidden>
         </Grid>
         <Grid item xs={12} md={4}>
           <CTA />
@@ -33,11 +35,9 @@ const HomeContainer = () => {
         <Grid item xs={12} md={6}>
           <Feed />
         </Grid>
-        <Hidden xsDown>
-          <Grid item xs={12} md={5}>
-            <Schedule />
-          </Grid>
-        </Hidden>
+        <Grid item xs={12} md={5}>
+          <Schedule />
+        </Grid>
       </Grid>
     </Container>
   )

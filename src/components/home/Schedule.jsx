@@ -11,7 +11,7 @@ import {
 
 const Schedule = () => {
   return (
-    <div>
+    <div style={{ margin: 10 }}>
       <AppBar position="static">
         <Toolbar>
           <Typography variant="h6">Schedule</Typography>

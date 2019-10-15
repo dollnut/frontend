@@ -26,7 +26,7 @@ const dummyData = [
 
 const Feed = () => {
   return (
-    <div>
+    <div style={{ margin: 10 }}>
       {" "}
       <AppBar elevation={4} position="static">
         <Toolbar>
