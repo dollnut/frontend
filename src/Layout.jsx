@@ -4,23 +4,26 @@ import { ThemeProvider } from "@material-ui/styles"
 import { mainTheme } from "./themes"
 import NavBar from "./components/navigation/NavBar"
 import SEO from "./SEO"
+import FirebaseProvider from "./effects/FirebaseWrapper"
 
 const theme = createMuiTheme(mainTheme)
 
 const Layout = ({ children, classes }) => {
   return (
     <ThemeProvider theme={theme}>
-      <SEO title="DollNutTV" />
-      <NavBar />
-      <div className={classes.root}>{children}</div>
-      <footer className={classes.footer}>
-        <div>
-          @dollnutTV 2019 |{" "}
-          <a href="https://twitch.tv/dollnut" target="__blank">
-            twitch.tv/dollnut
-          </a>
-        </div>
-      </footer>
+      <FirebaseProvider>
+        <SEO title="DollNutTV" />
+        <NavBar />
+        <div className={classes.root}>{children}</div>
+        <footer className={classes.footer}>
+          <div>
+            @dollnutTV 2019 |{" "}
+            <a href="https://twitch.tv/dollnut" target="__blank">
+              twitch.tv/dollnut
+            </a>
+          </div>
+        </footer>
+      </FirebaseProvider>
     </ThemeProvider>
   )
 }

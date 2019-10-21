@@ -16,6 +16,7 @@ import banner from "../../img/banner.png"
 import CTA from "./CTA"
 import Feed from "./Feed"
 import Schedule from "./Schedule"
+import { useFirebase } from "../../effects/FirebaseWrapper"
 
 const HomeContainer = () => {
   const classes = useStyles()
