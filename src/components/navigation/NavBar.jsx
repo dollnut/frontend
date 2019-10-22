@@ -16,6 +16,7 @@ import MenuIcon from "@material-ui/icons/Menu"
 import SideBar from "./SideBar"
 import { socialLinks } from "../../data"
 import { useFirebase } from "../../effects/FirebaseWrapper"
+import { Link } from "gatsby"
 
 const NavBar = () => {
   const [openSidebar, setOpenSidebar] = useState(false)
@@ -77,6 +78,22 @@ const NavBar = () => {
     )
   }
 
+  const renderLoginButton = () => {
+    if (userLoggedIn) {
+      return (
+        <Button color="inherit" component={Link} to="/me">
+          Account
+        </Button>
+      )
+    } else {
+      return (
+        <Button color="inherit" onClick={() => setLoginModalOpened(true)}>
+          Login
+        </Button>
+      )
+    }
+  }
+
   return (
     <>
       {renderLoginModal()}
@@ -118,14 +135,7 @@ const NavBar = () => {
             <TvIcon className={classes.tvIcon} />
             Stream
           </Button>
-          <Button
-            color="inherit"
-            onClick={() =>
-              userLoggedIn ? signOut() : setLoginModalOpened(true)
-            }
-          >
-            {userLoggedIn ? "Account" : "Login"}
-          </Button>
+          {renderLoginButton()}
         </Toolbar>
       </AppBar>
     </>
