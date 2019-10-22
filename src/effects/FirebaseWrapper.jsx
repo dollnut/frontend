@@ -1,5 +1,7 @@
 import firebase from "firebase"
 import React, { createContext, useContext, useEffect, useState } from "react"
+import { redirectTo } from "@reach/router"
+import { navigate } from "gatsby"
 
 var firebaseConfig = {
   apiKey: "AIzaSyDMJO0nixP1iiqdodrrkAyjXYzULrPx2NM",
@@ -38,23 +40,21 @@ const FirebaseProvider = ({ children }) => {
       .then(function(result) {
         const token = result.credential.accessToken
         const user = result.user
-        return true
       })
       .catch(function(error) {
         const errorCode = error.code
         const errorMessage = error.message
         const email = error.email
         const credential = error.credential
-        console.log(errorMessage)
-        return false
-        // ...
       })
   }
 
   const signOut = () => {
     auth
       .signOut()
-      .then(() => {})
+      .then(() => {
+        navigate("/")
+      })
       .catch(err => console.log(err))
   }
 
