@@ -98,7 +98,11 @@ const NavBar = () => {
     <>
       {renderLoginModal()}
       <AppBar className={classes.root}>
-        <SideBar open={openSidebar} onClose={() => setOpenSidebar(false)} />
+        <SideBar
+          open={openSidebar}
+          onClose={() => setOpenSidebar(false)}
+          setLoginModalOpened={setLoginModalOpened}
+        />
         <Toolbar>
           <div className={classes.socials}>
             <IconButton

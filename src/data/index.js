@@ -35,11 +35,4 @@ export const socialLinks = [
     color: purple[400],
     divider: true,
   },
-  {
-    fa: "fas fa-user-circle",
-    title: "Login",
-    color: grey[900],
-    hideOnNav: true,
-    internalLink: "/login",
-  },
 ]
