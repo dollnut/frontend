@@ -4,7 +4,7 @@ import { ThemeProvider } from "@material-ui/styles"
 import { mainTheme } from "./themes"
 import NavBar from "./components/navigation/NavBar"
 import SEO from "./SEO"
-import FirebaseProvider, { useFirebase } from "./effects/FirebaseWrapper"
+import FirebaseProvider, { useFirebase } from "./firebase/FirebaseWrapper"
 
 const theme = createMuiTheme(mainTheme)
 

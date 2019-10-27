@@ -1,7 +1,7 @@
 import React from "react"
 import Layout from "../Layout"
 import HomeContainer from "../components/home/HomeContainer"
-import FirebaseProvider from "../effects/FirebaseWrapper"
+import FirebaseProvider from "../firebase/FirebaseWrapper"
 export default () => {
   return (
     <FirebaseProvider>
