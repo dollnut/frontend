@@ -10,7 +10,8 @@ import {
 } from "@material-ui/core"
 import { makeStyles } from "@material-ui/styles"
 import { socialLinks } from "../../data"
-import { useFirebase } from "../../effects/FirebaseWrapper"
+import { useFirebase } from "../../firebase/FirebaseWrapper.jsx"
+
 import { navigate, Link } from "gatsby"
 
 const SideBar = ({ open, onClose, setLoginModalOpened }) => {

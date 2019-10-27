@@ -1,6 +1,6 @@
 import React from "react"
 import { Container, Paper, Typography, Button } from "@material-ui/core"
-import { useFirebase } from "../../effects/FirebaseWrapper"
+import { useFirebase } from "../../firebase/FirebaseWrapper.jsx"
 
 const AccountPage = () => {
   const { signOut, userLoggedIn } = useFirebase()

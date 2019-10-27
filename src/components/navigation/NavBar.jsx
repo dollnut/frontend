@@ -15,7 +15,8 @@ import TvIcon from "@material-ui/icons/Tv"
 import MenuIcon from "@material-ui/icons/Menu"
 import SideBar from "./SideBar"
 import { socialLinks } from "../../data"
-import { useFirebase } from "../../effects/FirebaseWrapper"
+import { useFirebase } from "../../firebase/FirebaseWrapper.jsx"
+
 import { Link } from "gatsby"
 
 const NavBar = () => {
