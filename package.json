@@ -17,7 +17,7 @@
     "@material-ui/icons": "^4.5.1",
     "@material-ui/styles": "4.5.0",
     "firebase": "^7.2.2",
-    "gatsby": "^2.15.35",
+    "gatsby": "^4.25.7",
     "gatsby-plugin-material-ui": "^2.1.6",
     "gatsby-plugin-react-helmet": "^3.1.13",
     "react": "^16.10.2",
